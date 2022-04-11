@@ -1,0 +1,11 @@
+/*8q- Escreva um programa que receba um valor inteiro e apresente o resultado do valor lido elevado ao
+quadrado.*/
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n;
+    puts("Digite um num inteiro: ");
+    scanf("%d", &n);
+    printf("O numero elevado ao quadrado eh: %.0f", pow(n,2));
+};
