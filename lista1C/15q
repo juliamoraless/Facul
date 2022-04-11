@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+//funcao p calcular o salario bruto
+float salariob (int dias)
+{ return (50.25 * dias);  
+};
+//funcao p calcular o salario - imposto de renda
+float iprenda (float vbruto) 
+{ return ( vbruto * 0.9);
+};
+
+
+int main()
+{   int dia;
+    float salbruto, saliquido;
+    puts("Quantos dias foram trabalhados no mês?");
+    scanf("%d",&dia);
+    
+    salbruto = salariob(dia);
+    printf("Seu salario bruto equivale a: %.2f \n", salbruto);
+    saliquido = iprenda(salbruto);
+    printf("Seu salario liquido (sem gratificacao) equivale a: %.2f \n", saliquido);
+    
+    if (dia <= 10) 
+    {
+        puts("Voce nao tem direito a gratificacao");
+    }
+    else if (10 > dia <= 20) 
+    {
+        printf("O seu salario + gratificacao equivale a : %.2f", salbruto * 1.2);
+    }
+    else if (20 < dia)
+    {
+        printf("O seu salario + gratificacao equivale a : %.2f", salbruto * 1.3);
+    };
+    
+   return 0;
+}
