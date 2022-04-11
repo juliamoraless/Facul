@@ -1,0 +1,14 @@
+/*21- Escreva um programa que leia dois inteiros e entao determine e imprima se o primeiro eh multiplo do
+segundo. Obs.:nao utilizar estrutura de decis ̃ao if. */
+#include <stdio.h>
+
+int main()
+{ 
+    int n1, n2;
+    puts("Digite um numero inteiro:");
+    scanf("%d", &n1);
+    puts("Digite outro numero inteiro:");
+    scanf("%d", &n2);
+    n1 % n2 ? printf("%d não eh multiplo de %d", n1, n2) : printf("%d eh multiplo de %d", n1, n2);
+return (0);
+}
