@@ -1,0 +1,20 @@
+/*10q- Escreva um programa que calcule e apresente o valor do volume de um caixa retangular.*/
+#include <stdio.h>
+
+float volume(float h, float l, float c) 
+{
+    return (h * c * l);
+};
+int main()
+{ 
+    float h, l, c, vol;
+    puts("Qual o comprimento da caixa?");
+    scanf("%f", &c);
+    puts("Qual a altura da caixa?");
+    scanf("%f", &h);
+    puts("Qual a largura da caixa?");
+    scanf("%f", &l);
+    
+    vol = volume(h, l, c); 
+    printf("O volume da caixa eh igual a %.2f", vol);
+};
