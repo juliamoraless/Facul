@@ -1,0 +1,20 @@
+//6q - calcular o IMC
+#include <stdio.h>
+float imc(float h, int sexo) 
+{
+    if (sexo == 1)
+    return (62.1 * h - 44.7);
+    else if (sexo == 2)
+    return (72.7 * h - 58);
+};
+int main () 
+{
+    float h; int sexo; float imcf;
+    puts("Informe sua altura:");
+    scanf("%f",&h);
+    puts("Escolha de acordo com o seu sexo: 1- FEMININO ou 2- MASCULINO: ");
+    scanf("%d",&sexo);
+    
+    imcf = imc(h, sexo);
+    printf("O seu IMC eh: %.2f", imcf);   
+};
