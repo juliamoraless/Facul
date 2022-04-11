@@ -1,0 +1,12 @@
+#include <stdio.h>
+//ler um decimal e imprimir em hexa e octal
+int main()
+{
+    int n;
+    puts("Digite um valor inteiro:");
+    scanf("%d",&n);
+    printf("O número em hexadecimal é: %x\n", n);
+    printf("O número em octal é: %o\n", n);
+
+    return(0);
+};
