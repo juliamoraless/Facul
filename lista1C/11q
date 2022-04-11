@@ -1,0 +1,22 @@
+/*11q- Apresente o valor da conversao em dolar de um valor lido em real. Solicite 
+o valor da cotaçao do dolar e tambem a quantidade de reais que o usuario
+deseja converter.*/
+#include <stdio.h>
+
+float conversor(float reais, float cota)
+{
+  return (reais * cota);  
+};
+
+int main()
+{ 
+    float reais, cota, total;
+    puts("Qual a cotação do dolar atualmente?");
+    scanf("%f", &cota);
+    puts("Quantos reais vc deseja converter?");
+    scanf("%f", &reais);
+
+    total = conversor(reais, cota);
+    printf("O total em dolar eh: %.2f", total);
+    return 0;
+}
