@@ -1,0 +1,16 @@
+#include <stdio.h>
+/*5q - Programa que pegue o valor de uma conta de restaurante e imprima o valor total a ser
+pago, considerando que o restaurante cobra 10% de taxa para o garcom.*/
+
+float conta (float valor) 
+{
+    return valor * 1.1;
+};
+
+int main()
+{
+    float total, n;
+    puts("Informe o valor da conta: ");
+    scanf("%f",&n);
+    total = conta(n);
+    printf("O seu valor com o acréscimo equivale a: %.2f", total);
