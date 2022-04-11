@@ -1,0 +1,9 @@
+#include <stdio.h>
+//3q - Programa p ler um numero real e escrever c apenas 1 casa decimal
+int main()
+{
+float n;
+printf("Escreva um numero real bem quebrado (ex:12.45678): ");
+scanf("%f",&n);
+printf("Seu número com apenas 1 casa decimal: %0.2f",n);
+};
