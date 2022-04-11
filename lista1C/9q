@@ -1,0 +1,11 @@
+/*9q- Escreva um programa que leia um valor numerico inteiro e apresente como resultado os seus valores
+sucessor e antecessor.*/
+#include <stdio.h>
+int main()
+{
+    int n, suce, ant;
+    puts("Digite um numero inteiro:");
+    scanf("%d", &n);
+    printf("O seu sucessor eh %d e o seu antecessor eh: %d", n+1, n-1);
+        
+};
