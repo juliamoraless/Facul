@@ -1,0 +1,14 @@
+/*17- Escrever um programa que receba um valor inteiro do usu ́ario e apresente o seu valor absoluto (m ́odulo).
+N ̃ao utilize estrutura decisao if. */
+#include <stdio.h>
+#include <stdlib.h> 
+
+int main()
+{
+   int n, modulo;    
+   puts("Escreva um numero inteiro:");
+   scanf("%d", &n);
+   modulo = abs(n);
+   printf("O modulo do numero eh: %d", modulo);
+return(0);
+}
