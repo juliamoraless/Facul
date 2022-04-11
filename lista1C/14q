@@ -1,0 +1,12 @@
+/*14q- Escreva um programa que leia uma temperatura em graus Celsius e apresente convertida em graus
+Fahrenheit.*/
+#include <stdio.h>
+
+int main()
+{
+   float c, f;    
+   puts("Temperatura em CELSIUS que deseja converter:");
+   scanf("%f",&c);
+   printf("A temperatura em FAHRENHEITE aquivale a: %.2f", f = (9*c)/5);
+return(0);
+}
