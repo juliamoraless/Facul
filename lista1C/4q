@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+//4q- programa p ler um valor e escrever o triplo, quadrado, e seu meio
+
+int main() 
+{
+    int n;
+    printf("Digite um numero inteiro: ");
+    scanf("%d",&n);
+    printf("O seu triplo é: %d\nO seu meio: %d\nE o quadrado: %.0f", 3 * n, n/2, pow(n,2) );
+    
+};
