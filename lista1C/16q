@@ -1,0 +1,20 @@
+/*16- Salario bruto e liquido de um prof. Ler o total de horas trabalhadas no mes, valor da hora aula e percentual de desconto do 
+INSS*/
+#include <stdio.h>
+
+int main()
+{
+    float horaula, totalhmes, inss, salariob, salariol;
+    puts("Quantas horas foram trabalhadas no mês?");
+    scanf("%f", &totalhmes);
+    puts("Qual o valor da hora aula?");
+    scanf("%f", &horaula);
+    puts("Qual o percentual de desconto do INSS?");
+    scanf("%f", &inss);
+    
+    salariob = totalhmes * horaula;
+    printf("O seu salario bruto equivale a: %.2f\n", salariob);
+    salariol = salariob - ((inss/100) * salariob);
+    printf("O seu salario liquido equivale a: %.2f", salariol);
+return(0); 
+}
