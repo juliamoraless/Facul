@@ -1,0 +1,16 @@
+/*13q- Escreva um programa que leia duas variaveis A e B e efetue a troca dos valores.*/
+#include <stdio.h>
+
+int main()
+{
+    int a, b, h;
+    puts("Digite um valor inteiro para A:");
+    scanf("%d", &a);
+    puts("Digite um valor inteiro para B:");
+    scanf("%d", &b);
+    h = a; 
+    a = b; 
+    b = h;
+    printf("O 'A' agora eh: %d e o 'B' eh: %d", a, b);
+return(0);
+}
