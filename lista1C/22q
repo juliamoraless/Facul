@@ -1,0 +1,22 @@
+/*22- No m ́ınimo, determine os n ́umeros inteiros equivalentes ao conjunto
+seguinte: A BCabc 0 12 $ * + / e o caractere espaco em branco.*/
+#include <stdio.h>
+
+int main()
+{ 
+   printf("%c\n", 65);
+   printf("%c", 66);
+   printf("%c", 67);
+   printf("%c", 97);
+   printf("%c", 98);
+   printf("%c\n", 99);
+   printf("%c\n", 48);
+   printf("%c%c\n", 49, 50);
+   printf("%c\n", 36); 
+   printf("%c\n", 42);
+   printf("%c", 43);
+   printf("%c", 9);
+   printf("%c\n", 47);
+
+   return (0); 
+}
