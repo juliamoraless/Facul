@@ -1,0 +1,15 @@
+//7- Faca um programa que leia uma quantidade de horas, minutos e segundos e imprima o total de segundos.
+#include <stdio.h>
+int main()
+{
+    int h, min, seg, totseg;
+    puts("Informe a quantidade de horas:");
+    scanf("%d",&h);
+    puts("Informe a quantidade de minutos:");
+    scanf("%d",&min);
+    puts("Informe a quantidade de segundos:");
+    scanf("%d",&seg);
+  
+    totseg = (h * 360) + (min * 60) + seg;
+    printf("O total de segundos equivale à %d", totseg);
+};
