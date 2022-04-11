@@ -1,0 +1,16 @@
+/*18- Escreva um programa que leia o raio de um circulo e imprima seu diametro, o valor de sua circuferencia
+e sua area. Use o valor de 3,14159 para ”pi”.Faca cada um destes calculos dentro da instrucoes (ou
+instrucoes) printf e use o especificador de conversao %f.. */
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+   float raio;
+   puts("Qual o valor do raio do circulo?");
+   scanf("%f", &raio);
+   printf("O seu dimetro equivale a: %.2f \n", raio * 2);
+   printf("O seu comprimento equivale a: %.2f \n", 2 * 3.14159 * raio);
+   printf("A sua area equivale a: %.2f", pow(raio,2) * 3.14159);
+return (0);
+}
