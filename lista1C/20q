@@ -1,0 +1,12 @@
+/*20-Escreva um programa que receba um numero inteiro e entao determine e imprima se ele  ́e par ou  ́ımpar.
+Obs.: N ̃ao utilizar estrutura de decis ̃ao if. */
+#include <stdio.h>
+
+int main()
+{
+   int n;    
+   puts("Digite um numero inteiro:");
+   scanf("%d", &n);
+   n % 2 ? puts("O numero eh impar") : puts("O numero eh par"); // ternario: condicao ? comando caso seja vdd : comando caso seja falso 
+   return (0);
+}
