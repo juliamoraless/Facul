@@ -1,0 +1,17 @@
+/*25q- Escreva um programa que leia um tempo em segundos e imprima quantas horas, minutos e segundos
+ha neste tempo.*/
+#include <stdio.h>
+
+int main()
+{ 
+    int  seg, h, min;
+    puts("Informe um tempo em segundos:");
+    scanf("%d", &seg);
+    min = seg / 60;
+    seg = seg % 60;
+    h = min / 60;
+    min = min % 60;
+    printf ("%d hora(s) %d minuto(s) e %d segundo(s)", h, min, seg);
+
+    return(0);
+}
