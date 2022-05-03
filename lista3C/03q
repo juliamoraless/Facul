@@ -1,0 +1,19 @@
+//informar a quant de caracteres da string fornecida sme usar strlen
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str [15];
+    int tam, i;
+    
+    printf("Digite uma palavra: ");
+    scanf(" %s", str); 
+    
+    i = 0;
+    while (str[i] != '\0') 
+    { i++; tam++; }
+    
+    printf("A palavra tem %d letras", tam);
+}
