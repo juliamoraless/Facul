@@ -1,0 +1,54 @@
+//USANDO STRCMP()
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+
+    char palavra1[50], palavra2[50];
+    int res;
+    
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra1);
+    printf("Digite outra palavra: ");
+    scanf("%s", palavra2);
+    
+    res = strcmp(palavra1, palavra2);
+    if (res == 0) puts("As palavras sao iguais!! :)");
+    else puts ("As palavras nao sao iguais! :(");
+    
+    return 0;
+}
+
+//SEM USAR STRCMP()
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+
+    char palavra1[50], palavra2[50];
+    int i = 0;
+    
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra1);
+    printf("Digite outra palavra: ");
+    scanf("%s", palavra2);
+    
+    while (palavra1[i] == palavra2[i]) //enquanto os caracteres forem iguais vai continuar
+    {
+        if (palavra1[i] == '\0' || palavra2[i] =='\0') //se alguma da palavras chegar ao fim vai sair do laço
+            break;                                    //caso contrario, analisa o prox caracter
+        i++;
+    }
+    
+    if( palavra1[i] == '\0' && palavra2[i] == '\0' ) /*caso as duas palavras tenham chegado ao fim (caracter final \0) 
+                                                     entao as palavras sao iguais*/
+    puts("As palavras sao iguais!! :)");
+    else
+    puts("As palavras nao sao iguais! :(");
+    
+    return 0;
+}
