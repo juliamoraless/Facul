@@ -1,0 +1,17 @@
+//USANDO STRCAT()
+#include <string.h>
+#include <stdio.h>
+//introdução strings
+int main()
+{
+    char nome1 [20]; char nome2 [20];
+    puts("Digite o seu nome: ");
+    scanf("%s", nome1);
+    puts("Digite o seu sobrenome: ");
+    scanf("%s", nome2);
+    
+    strcat(nome1, nome2);
+    printf("%s", nome1);
+    
+}
+
