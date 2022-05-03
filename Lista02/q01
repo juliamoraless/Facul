@@ -1,17 +1,27 @@
-/*1- Diga a ordem de calculo dos operadores em cada uma dasinstrucoes em C a seguir e mostre o valor
-de x depois que cada instrucao for executada.*/
+/* Faça um programa em C que leia um vetor do tipo float com 15 elementos e apresente a 
+
+soma do menor e maior elemento do vetor fornecido. */
 #include <stdio.h>
 
 int main()
-{ 
-    float x;
-    x = 7 + 3 * 6 / 2 - 1; //1ª: 3*6 ; 2ª: 18/2 ; 3ª: 7 + 9 - 1
-    printf("%.2f\n", x);
-    x = 2 % 2 * 2 - 2 / 2; //1ª: 2%2 ; 2ª: 0*2 ; 3ª: 2/2 ; 4ª: 0 - 1
-    printf("%.2f\n", x);
-    x = (3 * 9 * (3 + (9*3/(3)))); //1ª: (3*9)/3 ; 2ª: 3 + 9 ; 3ª: 3 * 9 * 12
-    printf("%.2f", x);
+{
+    float vet[15], maior, menor;
+    int a;
     
-   return (0);
+    for (a = 0; a < 15; a++) 
+    {
+        printf("Digite o %d valor: ", a+1);
+        scanf("%f", &vet[a]);
+    }
     
+    maior = vet[0];
+    menor = vet[0];
+    for (a = 0; a < 15; a++) 
+    {
+        if (vet[a] > maior) maior = vet [a];
+        else menor = vet [a];
+    }
+
+    printf("A soma do maior valor %.2f e do menor valor %.2f eh: %.2f", maior, menor, maior + menor);
+
 }
