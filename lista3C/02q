@@ -1,0 +1,26 @@
+//Faça um programa em C que leia uma string e um caractere do usu ́ario e informe se a string de
+//entrada contém o caracter fornecido.
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str [100], letra;
+    int ver = 0;
+    
+    printf("Escreva uma palavra: ");
+    scanf("%s", str); 
+    getchar();
+    printf("Digite uma letra: ");
+    scanf("%c", &letra);
+    
+    
+    for(int i = 0; i < strlen(str); i++)
+    { 
+        if(str[i] == letra) ver++;
+        else continue;
+    }
+    
+    (ver > 0) ? puts("O caracter pertence a string") : puts("O caracter nao pertence a string");
+
+}
