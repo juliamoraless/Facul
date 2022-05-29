@@ -1,0 +1,29 @@
+/*Escreva um programa que troque o valor de dois numeros utilizando ponteiros.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#define TAM 2
+
+int main()
+{
+    int *p = NULL, c = 0;
+    int v[TAM] = {1,2}; 
+    
+    p = v;
+    
+    for (int i=0; i < TAM; i++) {
+        printf ("%d\n", *(p + i));
+    }
+    
+    c = *(p + 0);
+    *(p + 0) = *(p + 1);
+    *(p + 1) = c;
+    
+    for (int i=0; i < TAM; i++) {
+        printf ("%d\n", *(p + i));
+    }
+    
+
+    
+    return 0;
+}
