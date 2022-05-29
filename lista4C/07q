@@ -1,27 +1,45 @@
 /*Escreva um programa que concatene duas strings utilizando ponteiros.*/
 
-#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void concatenarString(char *essa, char *maisEssa); 
+void concatenaString(char *, char *);
 
-int main() 
+int main(int argc, char const *argv[])
 {
-    char string1[] = "julia"; 
-    char string2[] = " ta com fome";
-    
-    concatenarString(string1, string2);
-    
-    printf("%s", string1);
-    
+    char string1[] = "julia-"; 
+    char string2[] = "ta-com-fome";
+    concatenaString(string1,string2);
     return 0;
 }
 
-void concatenarString( char *essa, char *maisEssa) 
-{
-    int tam1 = 0;
-    while (*(essa + tam1) != '\0') tam1++; //tam1 = 4 
-  
-    for(int i = 0; i<tam1; i++) 
-    *(essa + tam1 + i) = *(maisEssa + i);
+void concatenaString(char *p1, char *p2){
+
+    char *p = NULL;
+    char v[strlen(p1) + strlen(p2)];
+
+    //p = v;
+
+    p = malloc((strlen(p1) + strlen(p2)) * sizeof(char));
+    int i = 0;
+    while (*(p1 + i) != '\0'){
+        *(p + i) = *(p1 + i);
+        //*(p + strlen(p2) + i) = *(p1 + i);
+        i ++;
+    }
+
+    int j = 0;
+
+    while (*(p2 + j) != '\0')
+    {
+        *(p + i + j) = *(p2 + j);
+        j++;
+    }
+
+    for (int i = 0; i < (strlen(p1) + strlen(p2)) ; i++)
+    {
+        printf("%c",*(p + i));
+    }
     
+
 }
