@@ -1,0 +1,27 @@
+/*Escreva um programa que concatene duas strings utilizando ponteiros.*/
+
+#include <string.h>
+
+void concatenarString(char *essa, char *maisEssa); 
+
+int main() 
+{
+    char string1[] = "julia"; 
+    char string2[] = " ta com fome";
+    
+    concatenarString(string1, string2);
+    
+    printf("%s", string1);
+    
+    return 0;
+}
+
+void concatenarString( char *essa, char *maisEssa) 
+{
+    int tam1 = 0;
+    while (*(essa + tam1) != '\0') tam1++; //tam1 = 4 
+  
+    for(int i = 0; i<tam1; i++) 
+    *(essa + tam1 + i) = *(maisEssa + i);
+    
+}
