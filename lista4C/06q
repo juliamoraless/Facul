@@ -1,0 +1,28 @@
+/*Escreva um programa que copie uma string para outra usando 
+ponteiros.*/
+#include <stdio.h>
+
+void copiarString(char *copiarDaqui, char *colarAqui);
+
+int main()
+{
+    
+    char string1[] = "Julia Rodrigues Morales";
+    char string2[25];
+    
+    copiarString(string1, string2);
+    printf("%s", string2);
+    
+    getchar();
+}
+
+void copiarString(char *copiarDaqui, char *colarAqui) 
+{
+    while(*copiarDaqui != '\0') 
+    {
+        *colarAqui = *copiarDaqui;
+        ++colarAqui;
+        ++copiarDaqui;
+    }
+    *colarAqui = '\0'; //como o while verifica ate o caractere nulo p copiar, minha string copiada nao terá o caractere nulo, vai bugar, logo, necessario colocar manualmente
+}
