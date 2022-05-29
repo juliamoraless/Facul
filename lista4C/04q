@@ -1,0 +1,23 @@
+/*Escreva um programa que leia um vetor do usu ́ario e imprima seus valores e seus endere ̧cos. Teste
+o vetor com tipos de dados diferentes, analise os endere ̧cos. O que vocˆe observou?*/
+#include <stdio.h>
+#include <stdlib.h>
+#define TAM 3
+
+int main() 
+{
+    char *p = NULL, v[TAM];
+    
+    for(int i=0; i<TAM; i++) {
+        printf("Digite o %d valor: ", i+1);
+        scanf("%c", &v[i]);
+        getchar();
+    }
+    
+    p = v;
+    
+    for (int a=0; a < TAM; a++) {
+        printf ("O %d valor é: %c Endereço: %p \n", a+1, *(p + a), (p + a));
+    }    
+    return 0;
+}
