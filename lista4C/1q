@@ -1,0 +1,29 @@
+*Escreva um programa que adicione dois n ́umeros usando ponteiros. Al ́em do valor da soma, imprima
+tamb ́em o endereço de mem ́oria onde o valor resultante dessa soma est ́a armazenado.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#define TAM 2
+
+int main()
+{
+    int *p = NULL;
+     
+    int v[TAM] = {1,2}; 
+    
+    int soma = 0;
+    
+    //p = malloc(TAM * sizeof(int));
+    
+    p = v;
+    //p = &v[0];
+
+    for(int i = 0; i < TAM; i++){
+        soma += *(p + i);//soma += p[i]; 
+        printf("O endereco de memoria do indice %d e: %p\n",i,(p + i));
+    }
+    
+    printf("A soma dos valores e = %d",soma);
+    
+    return 0;
+}
