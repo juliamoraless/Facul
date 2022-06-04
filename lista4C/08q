@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define TAM 100
+
+int contaCaracter(char *, char c);
+
+int main(int argc, char const *argv[])
+{
+    char *frase = NULL, string[TAM], c;
+    
+    puts("Digite qualquer coisa");
+    gets(string);
+    
+    puts("Caractere a ser verificado:");
+    scanf("%c", &c);
+    
+    frase = string;
+    
+    printf("O caractere '%c' apareceu %d vezes :)", c,     contaCaracter(frase, c));
+    return 0;
+    
+}
+
+int contaCaracter(char *s, char car) 
+{
+    int cont = 0;
+    
+    for(int i = 0; i < strlen(s); i++) 
+    {
+        cont += *(s + i) == car ? 1 : 0;
+    }
+    
+    return cont;
+}
+
+
