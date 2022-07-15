@@ -17,10 +17,10 @@ struct disciplina{
 
 int main ()
 {
-    struct disciplina calculo;
-	struct professor rui;
+    struct disciplina portugues;
+	struct professor fabio;
 	
-	calculo.docente = &rui;
+	calculo.docente = &fabio;
 
     return 0;
 }
